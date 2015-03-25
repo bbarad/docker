@@ -16,7 +16,7 @@ WORKDIR   cctbx_build
 RUN       python ../cctbx_sources/libtbx/configure.py mmtbx
 RUN       make
 
-ENV PATH /opt/cctbx/cctbx_build/bin:$PATH2
+ENV PATH /opt/cctbx/cctbx_build/bin:$PATH
  
 WORKDIR   /
 CMD       ["bash"]
