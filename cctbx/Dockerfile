@@ -14,8 +14,9 @@ RUN       tar -xzf cctbx_bundle.tar.gz
 RUN       mkdir -p cctbx_build
 WORKDIR   cctbx_build
 RUN       python ../cctbx_sources/libtbx/configure.py mmtbx
-RUN       source setpaths.sh
 RUN       make
+
+ENV PATH /opt/cctbx/cctbx_build/bin:$PATH2
  
 WORKDIR   /
 CMD       ["bash"]
